@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-soft-grey">
       <Header />
-      <main className="flex-grow flex items-center justify-center px-6">
+      <main className="flex-grow flex items-center justify-center px-6 py-12 md:py-20">
         <div className={`max-w-7xl w-full flex flex-col md:flex-row ${alignment} space-y-8 md:space-y-0 md:space-x-8`}>
           <div className="md:w-2/3">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-primary leading-tight">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-primary leading-tight space-y-2 md:space-y-4">
               <span className="block">Real estate</span>
               <span className="block">in crypto</span>
               <span className="block">is boring !!</span>
