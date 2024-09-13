@@ -3,18 +3,21 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Logo from '../images/Logo.svg';
+import '../styles/Logo.css';
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col relative overflow-hidden">
+    <div className="min-h-screen flex flex-col">
       <AnimatedBackground />
-      <Header className="flex-shrink-0" />
+      <Header />
       <main className="flex-grow flex items-center justify-center p-4">
-        <div className="w-full max-w-[90%] aspect-[460/47] relative">
-          <Logo className="logo-white absolute inset-0 w-full h-full object-contain" />
+        <div className="w-full max-w-4xl">
+          <div className="logo-container">
+            <Logo className="logo-svg logo-white" />
+          </div>
         </div>
       </main>
-      <Footer className="flex-shrink-0" />
+      <Footer />
     </div>
   )
 }
