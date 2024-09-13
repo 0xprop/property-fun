@@ -10,8 +10,8 @@ export default function Home() {
       <AnimatedBackground />
       <Header className="flex-shrink-0" />
       <main className="flex-grow flex items-center justify-center p-4">
-        <div className="w-full h-full flex justify-center items-center">
-          <Logo className="logo-white w-auto h-auto max-w-[90%] max-h-[70vh] object-contain" />
+        <div className="w-full max-w-[90%] aspect-[460/47] relative">
+          <Logo className="logo-white absolute inset-0 w-full h-full object-contain" />
         </div>
       </main>
       <Footer className="flex-shrink-0" />
