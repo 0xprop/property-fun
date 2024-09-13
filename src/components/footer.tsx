@@ -9,9 +9,9 @@ export default function Footer({ className = '' }) {
         </div>
         <nav className="mb-4 sm:mb-0">
           <ul className="flex space-x-4 sm:space-x-6 text-sm sm:text-base text-white">
-            <li><Link href="/privacy" className="hover:text-primary transition-colors pb-2">Privacy</Link></li>
-            <li><Link href="/terms" className="hover:text-primary transition-colors pb-2">Terms</Link></li>
-            <li><Link href="/contact" className="hover:text-primary transition-colors pb-2">Contact</Link></li>
+            <li><Link href="/privacy" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Privacy</Link></li>
+            <li><Link href="/terms" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Terms</Link></li>
+            <li><Link href="/contact" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Contact</Link></li>
           </ul>
         </nav>
       </div>

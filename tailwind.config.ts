@@ -16,9 +16,21 @@ const config: Config = {
         'footer-text': '#1E1E1E',
         'soft-grey': '#F3F4F6',  // This will be used for background
       },
+      textShadow: {
+        'reflection': '0 1px 0 rgba(255, 255, 255, 0.4), 0 -1px 0 rgba(0, 0, 0, 0.4)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addComponents }: { addComponents: (components: Record<string, any>) => void }) {
+      const newComponents = {
+        '.text-shadow-reflection': {
+          textShadow: '0 3px 3px rgba(255, 255, 255, 0.7), 0 -3px 3px rgba(0, 0, 0, 0.7)',
+        },
+      }
+      addComponents(newComponents)
+    }
+  ],
 }
 
 export default config

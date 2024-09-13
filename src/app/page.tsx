@@ -18,7 +18,7 @@ export default function Home() {
             alt="Logo" 
             width={500} 
             height={200} 
-            className={`w-full h-auto max-w-[180px] sm:max-w-[240px] md:max-w-[300px] lg:max-w-[360px] ${styles.logoWhite}`}
+            className={`w-full h-auto max-w-[240px] sm:max-w-[300px] md:max-w-[300px] lg:max-w-[360px] ${styles.logoWhite}`}
             priority
           />
         </div>
