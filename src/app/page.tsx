@@ -3,7 +3,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Logo from '../images/Logo.svg';
-import '../styles/Logo.css';
+import styles from './Logo.module.css';
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       <Header />
       <main className="flex-grow flex items-center justify-center p-4">
         <div className="w-full max-w-4xl">
-          <div className="logo-container">
-            <Logo className="logo-svg logo-white" />
+          <div className={styles.logoContainer}>
+            <Logo className={`${styles.logoSvg} ${styles.logoWhite}`} />
           </div>
         </div>
       </main>
