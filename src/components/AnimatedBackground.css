@@ -1,0 +1,68 @@
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    background: black;
+    overflow: hidden;
+}
+
+.animated-bg::before,
+.animated-bg::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 70%;
+    opacity: 0.3;
+    transform-origin: center bottom;
+}
+
+.animated-bg::before {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 87, 34, 0.3) 0%,
+        rgba(255, 87, 34, 0.1) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    animation: liquid1 17s ease-in-out infinite alternate;
+}
+
+.animated-bg::after {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 160, 0, 0.3) 0%,
+        rgba(255, 160, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    animation: liquid2 13s ease-in-out infinite alternate;
+}
+
+@keyframes liquid1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(5%, 3%) rotate(2deg) scale(1.05);
+    }
+    66% {
+        transform: translate(-3%, 1%) rotate(-1deg) scale(0.98);
+    }
+    100% {
+        transform: translate(2%, -2%) rotate(1deg) scale(1.02);
+    }
+}
+
+@keyframes liquid2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(-5%, 2%) rotate(-2deg) scale(1.03);
+    }
+    66% {
+        transform: translate(3%, 3%) rotate(1deg) scale(0.97);
+    }
+    100% {
+        transform: translate(-2%, -1%) rotate(-1deg) scale(1.01);
+    }
+}
