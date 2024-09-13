@@ -8,7 +8,7 @@ export default function Footer({ className = '' }) {
           © 2024 property.fun  |  All rights reserved.
         </div>
         <nav className="mt-2 sm:mt-0">
-          <ul className="flex flex-wrap justify-center sm:justify-end space-x-8 text-sm sm:text-base font-light text-white">
+          <ul className="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm sm:text-base font-light text-white">
             <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link></li>
             <li><Link href="/terms" className="hover:text-primary transition-colors">Terms</Link></li>
             <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
