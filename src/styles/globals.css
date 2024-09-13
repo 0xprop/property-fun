@@ -17,3 +17,20 @@
 .logo-white {
   filter: brightness(0) invert(1);
 }
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  Flex-grow: 1;
+}
+
+.hero-section svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.svg-white {
+  filter: brightness(0) invert(1);
+}

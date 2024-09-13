@@ -1,68 +1,103 @@
 .animated-bg {
+    background: black;
     position: fixed;
     inset: 0;
-    background: black;
     overflow: hidden;
 }
 
 .animated-bg::before,
-.animated-bg::after {
+.animated-bg::after,
+.animated-bg .layer-1,
+.animated-bg .layer-2,
+.animated-bg .layer-3 {
     content: '';
     position: absolute;
     left: -50%;
-    bottom: -25%;
     width: 200%;
-    height: 50%;
-    opacity: 0.5;
+    height: 100%;
+    opacity: 0.2;
     transform-origin: center bottom;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .animated-bg::before {
+    bottom: -70%;
     background: radial-gradient(
         ellipse at center,
-        rgba(255, 87, 34, 0.3) 0%,
-        rgba(255, 87, 34, 0.1) 50%,
+        rgba(255, 100, 0, 0.5) 0%,
+        rgba(255, 100, 0, 0.2) 50%,
         rgba(0, 0, 0, 0) 70%
     );
-    animation: liquid1 17s ease-in-out infinite alternate;
+    animation: liquid1 17s;
 }
 
 .animated-bg::after {
+    bottom: -75%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 120, 0, 0.5) 0%,
+        rgba(255, 120, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    animation: liquid2 13s;
+}
+
+.animated-bg .layer-1 {
+    bottom: -80%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 140, 0, 0.4) 0%,
+        rgba(255, 140, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    animation: liquid3 15s;
+}
+
+.animated-bg .layer-2 {
+    bottom: -85%;
     background: radial-gradient(
         ellipse at center,
         rgba(255, 160, 0, 0.3) 0%,
         rgba(255, 160, 0, 0.1) 50%,
         rgba(0, 0, 0, 0) 70%
     );
-    animation: liquid2 13s ease-in-out infinite alternate;
+    animation: liquid4 19s;
+}
+
+.animated-bg .layer-3 {
+    bottom: -90%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 180, 0, 0.2) 0%,
+        rgba(255, 180, 0, 0.05) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    animation: liquid5 21s;
 }
 
 @keyframes liquid1 {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-    }
-    33% {
-        transform: translate(5%, 3%) rotate(2deg) scale(1.05);
-    }
-    66% {
-        transform: translate(-3%, 1%) rotate(-1deg) scale(0.98);
-    }
-    100% {
-        transform: translate(2%, -2%) rotate(1deg) scale(1.02);
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
 }
 
 @keyframes liquid2 {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-    }
-    33% {
-        transform: translate(-5%, 2%) rotate(-2deg) scale(1.03);
-    }
-    66% {
-        transform: translate(3%, 3%) rotate(1deg) scale(0.97);
-    }
-    100% {
-        transform: translate(-2%, -1%) rotate(-1deg) scale(1.01);
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(-1.5deg); }
+}
+
+@keyframes liquid3 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes liquid4 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(-0.5deg); }
+}
+
+@keyframes liquid5 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(0.5deg); }
 }
