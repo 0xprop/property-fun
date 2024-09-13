@@ -6,15 +6,15 @@ import Logo from '../images/Logo.svg';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="h-screen flex flex-col relative overflow-hidden">
       <AnimatedBackground />
-      <Header />
-      <main className="flex-grow flex items-center justify-center px-4 py-6 sm:px-6 sm:py-12">
-        <div className="max-w-7xl w-full flex justify-center items-center">
-          <Logo className="logo-white opacity-80" style={{ width: '100%', height: 'auto', maxWidth: '500px' }} />
+      <Header className="flex-shrink-0" />
+      <main className="flex-grow flex items-center justify-center px-4 py-2 sm:py-4">
+        <div className="w-full flex justify-center items-center">
+          <Logo className="logo-white w-full max-w-[60vmin] h-auto" />
         </div>
       </main>
-      <Footer />
+      <Footer className="flex-shrink-0 mt-auto" />
     </div>
   )
 }
