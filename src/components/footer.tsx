@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaTwitter, FaTelegramPlane } from 'react-icons/fa'; // Import X.com and Telegram icons
 
 export default function Footer({ className = '' }) {
   return (
@@ -9,9 +10,17 @@ export default function Footer({ className = '' }) {
         </div>
         <nav className="mb-4 sm:mb-0">
           <ul className="flex space-x-4 sm:space-x-6 text-sm sm:text-base text-white">
-            <li><Link href="/privacy" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Privacy</Link></li>
-            <li><Link href="/terms" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Terms</Link></li>
-            <li><Link href="/contact" className="hover:text-shadow-reflection transition-all duration-300 pb-2">Contact</Link></li>
+            <li>
+              <Link href="https://x.com/propertydotfun" className="hover:text-gray-400 transition-all duration-300 pb-2">
+                <FaTwitter className="inline-block text-xl hover:shadow-lg" /> {/* X.com icon with shadow effect and gray on hover */}
+              </Link>
+            </li>
+            <li>
+              <Link href="https://t.me/propertydotfun" className="hover:text-gray-400 transition-all duration-300 pb-2">
+                <FaTelegramPlane className="inline-block text-xl hover:shadow-lg" /> {/* Telegram icon with shadow effect and gray on hover */}
+              </Link>
+            </li>
+            {/* Removed previous links */}
           </ul>
         </nav>
       </div>
