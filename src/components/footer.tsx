@@ -11,13 +11,13 @@ export default function Footer({ className = '' }) {
         <nav className="mb-4 sm:mb-0">
           <ul className="flex space-x-4 sm:space-x-6 text-sm sm:text-base text-white">
             <li>
-              <Link href="https://x.com/propertydotfun" className="hover:text-gray-400 transition-all duration-300 pb-2">
-                <FaTwitter className="inline-block text-xl hover:shadow-lg" /> {/* X.com icon with shadow effect and gray on hover */}
+              <Link href="https://x.com/propertydotfun" className="hover:text-gray-300 transition-all duration-300 pb-2">
+                <FaTwitter className="inline-block text-3xl hover:text-white/50 transition-all duration-300 pb-2" /> {/* X.com icon with light white color on hover */}
               </Link>
             </li>
             <li>
-              <Link href="https://t.me/propertydotfun" className="hover:text-gray-400 transition-all duration-300 pb-2">
-                <FaTelegramPlane className="inline-block text-xl hover:shadow-lg" /> {/* Telegram icon with shadow effect and gray on hover */}
+              <Link href="https://t.me/propertydotfun" className="hover:text-gray-300 transition-all duration-300 pb-2">
+                <FaTelegramPlane className="inline-block text-3xl hover:text-white/50 transition-all duration-300 pb-2" /> {/* Telegram icon with light white color on hover */}
               </Link>
             </li>
             {/* Removed previous links */}
